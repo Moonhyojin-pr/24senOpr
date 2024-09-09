@@ -74,4 +74,5 @@ about 화면 들어가면 다른 메뉴버튼 눌러도 이동안됨
 -reset.css 추가 
  ★이슈: main 파일에만 reset.css 적용됨
 -post 링크 삭제
- ★이슈:리퍼지토리 (private>public 적용안됨)
+ ★이슈:리퍼지토리 (private>public 적용안됨) >>해결(0909)
+-main bar 고정하고 싶음(예시header main)
