@@ -1,4 +1,4 @@
-FlowRouter.route('/contact', {
+FlowRouter.route('/', {
     action: function() {
         BlazeLayout.render('layout', {main: 'contact'});
     }

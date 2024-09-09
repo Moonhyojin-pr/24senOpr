@@ -1,7 +1,7 @@
 
 Posts = new Mongo.Collection('posts');
 
-FlowRouter.route('/', {
+FlowRouter.route('/contact', {
     action: function() {
         BlazeLayout.render('layout', {main: 'main'});
     }
