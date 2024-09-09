@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1e3a8a;
+            color: white;
+        }
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+        .sidebar {
+            width: 200px;
+            padding: 20px;
+        }
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end; /* 오른쪽 정렬을 위해 추가 */
+            text-align: right; /* 텍스트 오른쪽 정렬 */
+        }
+        .menu-item {
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .image-container {
+            border: 2px solid #ff69b4;
+            padding: 10px;
+            max-width: 600px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .about-us-list {
+            list-style-type: none;
+            padding: 0;
+            text-align: right; /* 리스트 항목 오른쪽 정렬 */
+        }
+        .about-us-list li {
+            margin-bottom: 5px;
+        }
+        .logo {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="menu-item">Awards</div>
+            <div class="menu-item">Memorial</div>
+            <div class="menu-item">To, Seno</div>
+            <div class="menu-item">About us</div>
+        </div>
+        <div class="main-content">
+            <h1>About Us</h1>
+            <div class="image-container">
+                <img src="/api/placeholder/600/400" alt="Anime character">
+            </div>
+            <ul class="about-us-list">
+                <li>계속 About Us</li>
+                <li>계속 About Us</li>
+                <li>계속 About Us</li>
+                <li>계속 About Us</li>
+                <li>계속 About Us</li>
+                <li>계속 About Us</li>
+                <li>계속 About Us</li>
+            </ul>
+        </div>
+    </div>
+    <div class="logo"></div>
+</body>
+</html>

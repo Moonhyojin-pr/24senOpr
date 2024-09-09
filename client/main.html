@@ -1,0 +1,49 @@
+
+<template name="main">
+
+  
+  <body>
+    <div class="container"> 
+      
+      <div class="sidebar">
+        <img src="logo.png" alt="logo" class="logo"> 
+        <a class="sidebar-item" href="/contact">Awards</a>
+        <a class="sidebar-item" href="/memorial">Memorial</a>
+        <a class="sidebar-item" href="/">To.Seno</a>
+        <a class="sidebar-item" href="/about">About</a>   
+      </div>
+
+        <div class="main-content">  
+          <h1>To.Seno</h1>
+          <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">  
+          <input id="titlePost" type="text" maxlength="20" placeholder="메세지를 입력해주세요">
+          <button id ="tilteSave" onclick="">save</button>   
+          <!-- <a href="/post">Post</a>
+          <span id ="titleCount"></span> -->
+          
+
+          <!-- 루트 바꿨더니 안뜸!!!! -->
+        {{#each posts}} 
+        <article>
+            <div>
+             <a href="/detail/{{_id}}">{{title}}</a> 
+            </div>
+            <div>
+             {{titlePost}}
+            </div>
+        </article>
+        {{/each}}
+
+        </div>      
+    </div>
+     
+
+   
+
+</body>
+
+   
+
+</template>
+
+

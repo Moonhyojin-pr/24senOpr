@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Best Moment of This Year</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+        }
+        .container {
+            display: flex;
+            height: 100%;
+        }
+        .sidebar {
+            width: 80px;
+            background-color: #1a237e;
+            color: white;
+            padding: 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .sidebar-item {
+            margin: 10px 0;
+            font-size: 12px;
+            text-align: center;
+        }
+        .main-content {
+            flex-grow: 1;
+            background-color: #e3f2fd;
+            position: relative;
+            overflow: hidden;
+        }
+        .character-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .title {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 24px;
+            text-align: right;
+        }
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .navigation {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+        .nav-button {
+            background-color: rgba(255, 255, 255, 0.5);
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-item">Awards</div>
+            <div class="sidebar-item">Memorial</div>
+            <div class="sidebar-item">To.Seno</div>
+            <div class="sidebar-item">About</div>
+        </div>
+        
+        <div class="main-content">
+            <img src="/api/placeholder/1000/600" alt="Anime character with guitar" class="character-image">
+            <div class="title">
+                <h1>The Best Moment of This Year</h1>
+            </div>
+            <div class="footer">
+                영상제목영상제목영상제목영상제목영상제목영상제목영상<br>
+                10500개의 댓글
+            </div>
+            <div class="navigation">
+                <button class="nav-button">&#9664;</button>
+                <button class="nav-button">&#9654;</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
