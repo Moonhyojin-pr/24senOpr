@@ -58,9 +58,9 @@ git checkout [number-숫자]
 ------------------------------
 8.31~
 웹디자인 변경
-★template body.html 설정 가능한지 알아오기★
+★template body.html 설정 가능한지 알아오기★ 
 
-★main - message body 사용 문제
+★main - message body 사용 문제>해결(0910)
 (main>contact.html // 현main(message)>message.html로 변경하고싶음)
 
 about 화면 들어가면 다른 메뉴버튼 눌러도 이동안됨
@@ -76,3 +76,5 @@ about 화면 들어가면 다른 메뉴버튼 눌러도 이동안됨
 -post 링크 삭제
  ★이슈:리퍼지토리 (private>public 적용안됨) >>해결(0909)
 -main bar 고정하고 싶음(예시header main)
+★contact 메뉴바 css 안먹음
+★슬라이드 버튼 에러

@@ -1,6 +1,9 @@
 @import "reset.css";
 
-
+.container {
+  display: flex;
+  height: 100%;
+}
 
 body {
   margin: 0;
@@ -8,10 +11,16 @@ body {
   font-family: 'Nanum Myeongjo', sans-serif;
   height: 100%;
 }
-.container {
-  display: flex;
-  height: 100%;
+h2 {
+  /* position: absolute; */  
+  top: 20px;
+  right: 20px;
+  color: white;  
+  font-size: 25px;
+  line-height: 3;
+  text-align: right;
 }
+
 .nanum-myeongjo-regular {
   font-weight: 400;
 }
@@ -33,21 +42,45 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 .sidebar-item {
   margin: 10px 0;
-  font-size: 12px;
+  font-size: 15px;
   text-align: center;
+  text-decoration-line: none;
+  color : #fff;
+
 }
 .main-content {
   flex-grow: 1;
-  background-color: #e3f2fd;
+  background-color: #28488d;
   position: relative;
   overflow: hidden;
 
   /* about 배열 */
   /* align-items: flex-end;
   text-align: right; */
+}
+.sub-title {
+  position: absolute;
+  top: 20px;
+  right: 120px;
+  color: white;
+  border: 1px#b7ffff;
+  text-shadow: 0px 0px 16px #b7ffff;
+  font-size: 50px;
+  line-height: 3;
+  text-align: right;
+}
+
+.list {
+  position: absolute;
+  top: 194px;
+  right: 120px;
+  font-size: 24px;
+  color : #ffff;
+  line-height: 2;
 }
 .character-image {
   width: 100%;
@@ -61,6 +94,14 @@ body {
   background-repeat: no-repeat; 
   object-fit: cover; 
   mix-blend-mode: soft-light;
+}
+
+.image-container {
+  position: absolute;
+  width : 1082px;
+  height : 616px;
+  top : 344px;
+  left: 280px;
 }
 
 
@@ -114,7 +155,7 @@ body {
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
-  background-color: #bbb;
+  /* background-color: #bbb; */
 }
 .next {
   right: 0;

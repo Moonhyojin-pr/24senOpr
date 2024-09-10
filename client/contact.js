@@ -1,34 +1,44 @@
-FlowRouter.route('/', {
+
+Posts = new Mongo.Collection('posts');
+
+FlowRouter.route('/contact', {
     action: function() {
         BlazeLayout.render('layout', {main: 'contact'});
     }
 })
 
-//slide, paging (0908)
 
-// let silideIndex = 1;
-// showSlides(silideIndex);
+//0810추가(titlePost 입력, DB)
+Template.contact.events({
+    'click #tilteSave': function(event) {
+        // #save button 클릭 시 실행 됨.
+        // 1. #titlePost input에서 제목을 가져옴
+        const titlePost = $('#titlePost').val();       
+        // 3. 가져온 데이터를 json으로 DB에 저장
+        if (titlePost.length <= 0) {
 
-// function plusSlides(n){
-//     showSlides(slideIndex +=n);
-// }
+            return alert('제목/내용을 입력 해 주세요.');
 
-// function currentSlide(n){
-//     showSlides(slideIndex +=n);
-// }
+        }else{
 
-// function showSlides(n) {
-//     let i;
-//     let slides =document.getElementsByClassName("mySlides");
-//     let pages = document.getElementsByClassName("page");
-//     if (n > slides.length) {slideIndex = 1}
-//     if (n < 1) {slideIndex = slides.length}
-//     for (i =0; i < slides.length; i++) {
-//         slides[i].computedStyleMap.display = "none";
-//     }
-//     for (i = 0; i< pages.length; i++) {
-//         pages[i].className = pages[i].className.replace(" active", "");
-//     }
-//     slides[slideIndex-1].computedStyleMap.display = "block";
-//     pages[slideIndex-1].className += " active";
-// }
+            alert('저장됐습니다.');
+
+            const json = {
+                titlePost: titlePost,
+                createdAt: new Date()           
+            }
+            Posts.insert(json);
+            
+        }
+            //****실행안됨****
+            // titlePost = '';
+        
+    }
+})
+  
+
+Template.contact.helpers({
+    posts: function() {
+        return Posts.find().fetch();
+    }
+});

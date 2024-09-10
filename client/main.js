@@ -1,60 +1,47 @@
-
-Posts = new Mongo.Collection('posts');
-
-FlowRouter.route('/contact', {
+FlowRouter.route('/', {
     action: function() {
         BlazeLayout.render('layout', {main: 'main'});
     }
 })
 
-
-// //글자 수 카운트
-// document.addEventListener('DOMContentLoaded', function(){
-//     const titlePost =document.getElementById('titlePost');
-//     const titleCount =document.getElementById('titleCount');
-//     const charCount =document.getElementById('charCount');
-
-//     titlePost.addEventListener('input', function() {
-//     const text = $('#titlePost').val();
-//     titleCount.textContent = text;
-//     charCount.textContent = `${text.length} 글자;`
-//     });
-
-// });
-
-
-
-//0810추가(titlePost 입력, DB)
-Template.main.events({
-    'click #tilteSave': function(event) {
-        // #save button 클릭 시 실행 됨.
-        // 1. #titlePost input에서 제목을 가져옴
-        const titlePost = $('#titlePost').val();       
-        // 3. 가져온 데이터를 json으로 DB에 저장
-        if (titlePost.length <= 0) {
-
-            return alert('제목/내용을 입력 해 주세요.');
-
-        }else{
-
-            alert('저장됐습니다.');
-
-            const json = {
-                titlePost: titlePost,
-                createdAt: new Date()           
-            }
-            Posts.insert(json);
-            
-        }
-            //****실행안됨****
-            // titlePost = ' ';
-        
+Template.main.onRendered(function() {
+    let slideIndex = 1;
+    const container = this.find('.slideshow-container');
+    
+    if (container) {
+      showSlides(slideIndex);
+      
+      // Event listeners for next/prev buttons
+      container.querySelector('.prev').addEventListener('click', () => plusSlides(-1));
+      container.querySelector('.next').addEventListener('click', () => plusSlides(1));
+      
+      // Event listeners for paging dots
+      const pagingDots = container.querySelectorAll('.page');
+      pagingDots.forEach((dot, index) => {
+        dot.addEventListener('click', () => currentSlide(index + 1));
+      });
     }
-})
   
-
-Template.main.helpers({
-    posts: function() {
-        return Posts.find().fetch();
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
     }
-});
+  
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+  
+    function showSlides(n) {
+      const slides = container.getElementsByClassName("mySlides");
+      const dots = container.getElementsByClassName("page");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (let i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].classList.add("active");
+    }
+  });
