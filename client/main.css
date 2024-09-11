@@ -53,6 +53,7 @@ h2 {
 
 }
 .main-content {
+  width:1920px;  
   flex-grow: 1;
   background-color: #28488d;
   position: relative;
