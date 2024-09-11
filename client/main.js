@@ -11,11 +11,11 @@ Template.main.onRendered(function() {
     if (container) {
       showSlides(slideIndex);
       
-      // Event listeners for next/prev buttons
+      // next/prev buttons
       container.querySelector('.prev').addEventListener('click', () => plusSlides(-1));
       container.querySelector('.next').addEventListener('click', () => plusSlides(1));
       
-      // Event listeners for paging dots
+      // paging dots
       const pagingDots = container.querySelectorAll('.page');
       pagingDots.forEach((dot, index) => {
         dot.addEventListener('click', () => currentSlide(index + 1));

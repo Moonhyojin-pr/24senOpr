@@ -63,14 +63,14 @@ h2 {
   text-align: right; */
 }
 .sub-title {
-  position: absolute;
-  top: 20px;
+  position :relative;
+  top: 50px;
   right: 120px;
   color: white;
   border: 1px#b7ffff;
   text-shadow: 0px 0px 16px #b7ffff;
   font-size: 50px;
-  line-height: 3;
+  line-height: 1;
   text-align: right;
 }
 
@@ -118,14 +118,6 @@ h2 {
   text-align: right;
 }
 
-.footer {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  background-color: white; 
-  padding: 10px;
-  border-radius: 5px;
-}
 .navigation {
   position: absolute;
   top: 50%;
@@ -180,4 +172,16 @@ h2 {
 }
 .active, .page:hover {
   background-color: #717171;
+}
+
+.board-list {
+  list-style-type: none;
+  padding: 0;
+}
+.board-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 5px;
+  color : #ffff;
 }
