@@ -35,14 +35,14 @@ h2 {
 }
 
 .sidebar {
-  width: 80px;
+  width: 150px;
   background-color: #28488d;
   color: white;
   padding: 150px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  
 }
 .sidebar-item {
   margin: 10px 0;
@@ -53,15 +53,13 @@ h2 {
 
 }
 .main-content {
-  width:1920px;  
+  width:1620px;
+  /* height: 100%;   */
   flex-grow: 1;
   background-color: #28488d;
   position: relative;
-  overflow: hidden;
-
-  /* about 배열 */
-  /* align-items: flex-end;
-  text-align: right; */
+  /* overflow: auto; */
+  
 }
 .sub-title {
   position :relative;
@@ -97,10 +95,28 @@ h2 {
   mix-blend-mode: soft-light;
 }
 
+
+.youtub {
+  width: 20px;
+  height: 20px;  
+  background-position: 25% 25%;
+  background-repeat: no-repeat; 
+  object-fit: cover; 
+  
+}
+.twitter {
+  width: 20px;
+  height: 20px;
+  background-position: 25% 25%;
+  background-repeat: no-repeat; 
+  object-fit: cover; 
+  
+}
+
 .image-container {
   position: absolute;
   width : 1082px;
-  height : 616px;
+  height : 850px;
   top : 344px;
   left: 280px;
 }
@@ -148,7 +164,8 @@ h2 {
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
-  /* background-color: #bbb; */
+  position: fixed;
+  
 }
 .next {
   right: 0;
@@ -178,6 +195,13 @@ h2 {
 .board-list {
   list-style-type: none;
   padding: 0;
+  width :1160px;
+  height:820px;
+  top: 200px;
+  left: 410px;
+  gap :16px;
+  overflow: auto;
+ 
 }
 .board-item {
   background-color: rgba(255, 255, 255, 0.1);
@@ -186,3 +210,20 @@ h2 {
   border-radius: 5px;
   color : #ffff;
 }
+
+.titlePost{
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.tilteSave{
+  padding: 10px 20px;
+  background-color: #77a2ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
